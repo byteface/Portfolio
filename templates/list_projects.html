@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+{% block main %}
+
+    <article id="title" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+             xmlns="http://www.w3.org/1999/html">
+        <header>
+            <hgroup>
+                <h2>Lista över projekt</h2>
+            </hgroup>
+        </header>
+        <p>
+            Nedan följer en lista över utvalda programmeringsprojekt.
+            För varje projekt finns en länk till en projektsida med mer utförlig
+            information än den komprimerade varianten som visas här.
+        </p>
+        <p>
+            Till höger kan du bläddra i en mer snabbnavigerad meny för att komma
+            åt samma projekt.
+        </p>
+    </article>
+
+    <article>
+        <p>
+            <!-- Skapa en tabell med olika storlek beroende hur många projekt som finns i databasen-->
+            {% for projects in db %}
+                <table>
+                    <tr>
+                        <td width="400px">
+                            <p>
+                                <b style="font-size:17px"> {{projects["project_name"]}} </b>
+                                <br><br>
+                                <a href="../projects/{{projects["project_no"]}}">Länk till projektsida</a>
+                                <br><br>
+                                <b>Kort beskrivning</b>
+                                <br>
+                                <i>{{projects["short_description"]}}</i>
+                                <br>
+
+                                <!-- Loopa över antalet tekniker -->
+                                <b>Tekniker</b>
+                                <br>
+
+                                {% for t in projects["techniques_used"] %}
+                                    <i> {{t}}</i>
+                                {% endfor %}
+                            </p>
+                        </td>
+                        <!-- En ruta för liten projektbild -->
+                        <td>
+                            <a href="../projects/{{projects["project_no"]}}">
+                            <img src="../static/images/{{projects["small_image"]}}">
+                                </a>
+                        </td>
+                    </tr>
+                </table>
+                <hr class = "fade">
+            {% endfor %}
+        </p>
+    </article>
+
+{% endblock %}
+
+<!-- Skapar komprimerad vy över projekten i databasen -->
+{% block side %}
+    <h3>Liten projektvy</h3>
+    <p2>Klicka på länkarna nedan.</p2>
+    <p>
+        {% for projects in db %}
+            <li>
+                <a href="../projects/{{projects["project_no"]}}">{{projects["project_name"]}} </a>
+            </li>
+        {% endfor %}
+    </p>
+{% endblock %}
+	
+

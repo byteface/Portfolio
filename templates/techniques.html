@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+    {% block main %}
+
+        <article id="title">
+            <header>
+                <hgroup>
+                    <h2>Lista över använda tekniker</h2>
+                </hgroup>
+            </header>
+            <p>
+                På den här sidan listas tekniker som använts i projekten.
+                Om du använder menyn till höger kommer projekt där teknikerna
+                ingår listas nedan.
+            </p>
+        </article>
+
+        <article>
+            <header>
+                <hgroup>
+                    <h2></h2>
+                </hgroup>
+            </header>
+            <p>
+            </p>
+        </article>
+
+
+    {% endblock %}
+
+    <!-- Meny-vy för att öppna information om använda tekniker -->
+    {% block side %}
+        <h3>Tekniker</h3>
+        <p>
+            {% for t in techniques %}
+                <li><a href="/techniques/{{t}}">{{t}} </a> </li>
+            {% endfor %}
+            </p>
+    {% endblock %}
+

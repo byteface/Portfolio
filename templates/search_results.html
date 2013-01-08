@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block main %}
+
+    <article id="title">
+        <header>
+            <hgroup>
+                <!-- Sida för sökresultat att presenteras på -->
+                <h2>Lista över sökresultat</h2>
+            </hgroup>
+        </header>
+        <p>
+            Nedan ser du resultatet av din sökning, och till höger vilken
+        söksträng du valde. Du kan klicka på prjektnamnen för att navigera
+            vidare till respektive projektsida.
+        </p>
+    </article>
+
+    <article>
+
+        <p>
+            <!-- Om sökningen inte renderade i en träff -->
+            {% if search_res == []  %}
+                Sökningen gav tyvärr inga resultat.
+            {% endif %}
+            <!-- Annars, rita ut en tabell med sökresultatets (lista med dicts) innehåll -->
+            {% if not search_res == []  %}
+                <table border="0">
+                    <tbody>
+                    <tr>
+                        <td>
+                            <b>Projektnamn/Länk</b>&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <b>Kursnamn</b>&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <b>Beskrivning</b>&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <b>Tekniker</b>&nbsp;&nbsp;
+                        </td>
+                        <td>
+                            <b>Thumbnail</b>&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <!-- Generera ny tabellrader ju fler träffar i databasen -->
+                    {% for item in search_res %}
+                        <tr>
+                            <td>
+                                <a href="../projects/{{item["project_no"]}}">{{item["project_name"]}}</a>
+                                &nbsp;
+                            </td>
+                            <td>{{item["course_name"]}}&nbsp;</td>
+                            <td>{{item["short_description"]}} &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                            <td align="center">
+                                <!-- Lista alla använda tekniker i projektet -->
+                                {% for t in item["techniques_used"] %}
+                                    {{t}}
+                                    <br>
+                                {% endfor %}
+                            </td>
+                            <td>&nbsp; &nbsp; &nbsp; &nbsp;
+                                <img src="../static/images/{{item['small_image']}}">
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            {% endif %}
+        </p>
+    </article>
+
+{% endblock %}
+
+{% block side %}
+    <h3>
+        <!--Här presenteras vår söksträng -->
+        Du sökte på:<br><br> <font style="background-color: #ffc0cb">{{search}}</font>
+    </h3>
+{% endblock %}

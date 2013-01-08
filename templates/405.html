@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+    {% block main %}
+
+        <article id="title">
+            <header>
+                <hgroup>
+                    <h2>Om</h2>
+                </hgroup>
+            </header>
+            <p>Om</p>
+        </article>
+
+        <article>
+            <header>
+                <hgroup>
+                    <h2>Om</h2>
+                </hgroup>
+            </header>
+            <p>
+            </p>
+        </article>
+
+        <!-- Fånga fel nr 405, forbidden method -->
+        <h2 align="center">Fel nr: {{e}} </h2>
+             <p align="center">
+                Du har använt en förbjuden metod. Testa gärna en annan metod.
+            </p>
+
+    {% endblock %}
+
+

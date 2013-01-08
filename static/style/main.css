@@ -1,0 +1,235 @@
+*{
+    /* Asterixen �ndrar alla tagagrs default! */
+    margin: 5px;
+    padding: 5px;
+}
+
+body{
+    text-align: center;
+    background-image:url("bakgrund.jpg"); /* no-repeat;*/
+    background-attachment: fixed; /* force image to stay put */
+    /*color: #000;*/
+}
+
+#main_section li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+header, section, footer, aside, nav, article, hgroup{
+    display: block;
+}
+
+hr.fade {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+h1{
+    font: bold 30px fixedsys, consolas, monospace;
+    text-align: center;
+}
+
+h2{
+    font: bold 16px courier;
+    text-align: center;
+}
+
+h3{
+    font: bold 14px courier;
+    color: white;
+    text-align: center;
+}
+
+img {
+    border: none;
+}
+
+p{
+    text-align: justify;
+    font: 14px fixedsys, consolas, monospace;
+    margin-top: 5px;
+}
+
+p2{
+    text-align: justify;
+    font: 12px fixedsys, consolas, monospace;
+    margin-top: 5px;
+    color: white;
+}
+
+#tags{
+    font-family: fixedsys, consolas, monospace;
+}
+
+#description{
+    text-align: justify;
+    margin: 5px 5px 5px 5px;
+    color: #222222;
+}
+
+
+
+#container{
+    border: 8px outset red;
+    border-radius:10px;
+    width: 1000px;
+    margin: 15px auto;
+    text-align: left;
+    background: #000f;
+}
+
+#top_header{
+    background: #E41B17;
+    padding: 15px;
+    text-align: center;
+    border-left: 7px dashed black;
+    border-right: 7px dashed black;
+    border-top: 7px outset red;
+    border-bottom: 7px outset #ff0000;
+}
+
+#top_header h1{
+    color: #000;
+}
+
+#top_menu{
+    border-top: 5px outset #6698FF;
+    border-left: 5px dashed black;
+    border-right: 5px dashed black;
+    border-bottom: 5px outset #6698FF;
+    color:white;
+    background: #17e0e3;
+    padding: 15px;
+    text-align: center;
+    margin: 10px 10px;
+}
+
+#top_menu li{
+    display: inline-block;
+    list-style: none;
+    font: bold 14px fixedsys;
+    color: #FFFFFF;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    border-right: 2px dotted blue;
+}
+
+#top_left_section{
+    width: 0px;
+    float: left;
+    margin: 0px auto 0px auto; 
+}
+
+
+#main_section{
+    width: 70%;
+    float: left;
+    margin: 10px auto 30px auto;
+}
+
+article{
+    background: #5EFB6E;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: black 8px 8px 8px;
+}
+
+article footer{
+    text-align: right;
+}
+
+article a:link{
+    font-weight: normal;
+    color: #000000;
+    text-shadow: none;
+}
+
+article a:visited{
+    color: #000000;
+}
+
+article a:hover{
+    color: #000000;
+    text-decoration: underline;
+}
+
+article a:active{
+    color: #000000;
+}
+
+article dl{
+    margin: 0px 0px 20px 0px;
+}
+article dt{
+    margin: 10px 0px 10px 20px;
+    font: 14px system;
+    font-weight: bold;
+}
+article dd{
+    margin: 10px 0px 10px 50px;
+    font: 14px system;
+}
+
+article li{
+    font-weight: normal;
+    font: 14px system;
+}
+
+#title{
+    background: #fff;
+    color: #000;
+    text-align: center;
+}
+
+#sidebar{
+  float: right;
+  width: 220px;
+  margin: 10px 10px 10px 10px;
+  padding: 20px;  246px
+  background: #ffa21b;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  box-shadow: red 8px 8px 8px;
+  -moz-box-shadow:  #284A7E 8px 8px 8px;
+  }
+  
+#the_footer{
+    border-left: 5px dashed black;
+    border-right: 5px dashed black;
+    border-top: 10px outset red;
+    border-bottom: 10px outset red;
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    background: #E41B17;
+}
+
+a:link{
+    font: bold 16px fixedsys, consolas, monospace;
+    color: #000;
+    text-decoration: none;
+    text-shadow: #777 2px 2px 2px;
+}
+
+a:visited{
+    color: #333;
+}
+
+a:hover{
+    color: #fff;
+}
+
+a:active{
+    color: #6666AA;
+}
+
+li{
+    margin: 10px 0px 0px 20px;
+}
+
+

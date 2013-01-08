@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+{% block main %}
+
+    <article>
+        <header>
+            <hgroup>
+                <h2>Detaljerad projektinformation</h2>
+            </hgroup>
+        </header>
+        <p>
+
+            <br><br>
+            <b style="font-size:20px"> {{project["project_name"]}}</b>
+            <br>
+        <hr class = "fade">
+        <table>
+            <tr>
+                <td width="400px">
+                    <p>
+                        <!-- Loopa genom alla takniker i projektet -->
+                        <b>Tekniker</b>
+                        <br>&nbsp;
+
+                        {% for t in project["techniques_used"] %}
+                            {{t}}
+
+                        {% endfor %}
+                        <br>
+                        <b>Startdatum</b>
+                        <br>
+                        <i> {{project["start_date"]}}</i>
+                        <br>
+                        <b>Slutdatum</b>
+                        <br>
+                        <i> {{project["end_date"]}}</i>
+                        <br>
+                        <b>Kurs</b>
+                        <br>
+                        <i> {{project["course_name"]}}</i>
+                        <br>
+                        <b>Kurskod</b>
+                        <br>
+                        <i> {{project["course_id"]}}</i>
+                        <br>
+                        <b>Kurspoäng</b>
+                        <br>
+                        <i> {{project["academic_credits"]}}</i>
+                        <br>
+                        <b>Gruppstorlek</b>
+                        <br>
+                        <i> {{project["group_size"]}}</i>
+                        <br>
+                        <b>Källkod [GitHub]</b>
+                        <br>
+                        <a href="{{project["external_link"]}}" target="_blank">
+                         Tryck här för att beskåda
+                        </a>
+                        <br>
+                            <b>Extramaterial</b>
+                            <br>
+                    <a href="{{project["lulz_had"]}}" target="_blank">{{project["lulz_had"]}}</a>
+                            <i> </i>
+                            <br>
+                    </p>
+                </td>
+                <td>
+                    <img src="../static/images/{{project["big_image"]}}">
+                </td>
+            </tr>
+        </table>
+        </p>
+    </article>
+
+    <!-- Skapa en detaljerad projektvy med så mycket information vi kan inrymma.
+    Generera en tabell
+    -->
+
+
+{% endblock %}
+
+{% block side %}
+    <!-- Komrimerad projektvy -->
+    <p2>
+        <br>
+        <h3>Projektbeskrivning</h3>
+        <table>
+            <tr>
+                <td>
+
+                    {{project["long_description"]}}
+                </td>
+            </tr>
+        </table>
+    </p2>
+{% endblock %}
+	
+

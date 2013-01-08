@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+{% block main %}
+
+    <article id="title">
+        <header>
+            <hgroup>
+                <h2>Per Jonsson hälsar dig välkommen till innovativt CV</h2>
+            </hgroup>
+        </header>
+        <a title="Innovativ Programmering (180 hp)" href="http://www.liu.se"
+           target="_blank">
+            <img src="static/images/vote_1.png" alt="Innovativ Programmering"
+                 width="120" height="100">
+        </a>
+        <p>
+            Jag - Per - välkomnar dig till min programmeringsportfolio som är en
+            integral del av mina studier på Linköpings universitet där jag läser
+            <a title="Innovativ Programmering 180 hp"
+               href="http://www.liu.se/utbildning/program/innovativprog?l=sv"
+               target="_blank">Innovativ Programmering</a>.
+            Programmet är en hantverksinriktad och praktiskt orienterad
+            kandidatutbildning på 180 hp. Fokus ligger på agila utvecklingsmetodiker
+            och en lärling->gesäll->mäster-progression.
+        </p>
+
+        <p>
+            Syftet med den här sajten är att kunna fungera som en interaktiv
+            portfolio / CV där mina programmeringskunskaper är integrerade i själva CV:t.
+            Det finns även en CV-specifik sektion i menyn för en mer traditionell vy.
+            Under flikarna <a title="Projekt" href="/list" target="_blank">"projekt"</a>
+            och <a title="Tekniker" href="/techniques" target="_blank">"tekniker"</a>
+            i menyn, finns mer ingående information om enskilda projekt.
+            Själva portfolion är ett projekt i sig.
+        </p>
+        <p>
+            En tänkt arbetsgivare bör alltså kvickt kunna skapa sig en överskådlig bild
+            genom att interagera med denna portfolio-app.
+        </p>
+        <p>
+            Fler tekniska detaljer kring hur portfolion är uppbyggd och dess arkitektur
+            förklaras nedan.
+        </p>
+    </article>
+
+    <article>
+        <header>
+            <hgroup>
+                <h2>Så funkar portfolion</h2>
+            </hgroup>
+        </header>
+        <p>
+            HTML-koden är skriven i HTML5 och CSS-koden i CSS3. Sidan validerar enligt
+            WC3. Källkoden, manual samt ytterligare info återfinns på
+            <a href="../projects/3" target="_blank">projektsidan</a> för portfolion.
+            Du navigerar på sajten främst genom den blåfärgade menyn överst.
+            <br>
+        </p>
+
+        <p>
+            Portfolions arkitektur är uppbyggd kring två lager; presentationslagret
+            och datalagret. Båda lager baserar sin funktionalitet på Python-script.
+            Presentationslagret interagerar med användaren och datalagret med databasen.
+        </p>
+        <p>
+            Databasen är skriven i <a href="http://json.org/" target="_blank">
+            JSON-format</a>. Från den hämtar datalager-scriptet information kring
+            mina utförda programmeringsprojekt. Datalagret vidarebefordrar sedan
+            denna information till presentationslagret - serverscripet - som begär
+            utlämning av informationen när den behövs i HTML-formulären.
+        </p>
+        <p>
+            Dynamiska mallar genereras med hjälp av
+            <a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a> och
+            <a href="http://flask.pocoo.org/" target="_blank">Flask</a>som webbramverk.
+            Sajten drivs som en webbapplikation på
+            <a href="https://developers.google.com/appengine/" target="_blank">
+                Google App Engine</a>.
+        </p>
+        <p>
+            <a href="http://www.jetbrains.com/pycharm/" target="_blank">
+                PyCharm</a> och Pythons <a href="http://www.python.org/" target="_blank">
+            IDLE</a> har varit de huvudsakliga utvecklingsverktygen under projektets gång.
+        </p>
+
+    </article>
+
+
+{% endblock %}
+
+
+{% block side %}
+
+    <h3> Twitter</h3>
+
+    <a class="twitter-timeline" width="220" height="400"
+       href="https://twitter.com/ProgrammerPer"
+       data-widget-id="283621272166989825">@ProgrammerPer</a>
+    <script>
+        !function(d,s,id)
+        {var js,fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+                js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}
+        }(document,"script","twitter-wjs");
+    </script>
+
+{% endblock %}

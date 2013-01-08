@@ -1,0 +1,86 @@
+[
+  {
+    "start_date": "2012-08-29",
+    "short_description": "Imperativ Programmering i Python 3.x.",
+    "course_name": "Imperativ Programmering",
+    "long_description": "Kursen inleder utbildningen Innovativ programmering. I kursen tittas noggrant på principerna för grundläggande programmering, specifikt imperativ programmering. Det dynamiskt typade programmeringsspråket Python används i kursen. Kursen ges parallellt med den första projektkursen som också använder Python.",
+    "group_size": 2,
+    "academic_credits": "6",
+    "lulz_had": "",
+    "external_link": "https://github.com/perjo927/Sokoban",
+    "small_image": "1small.jpg",
+    "techniques_used": [
+      "Python 3.x"
+    ],
+    "project_name": "Python",
+    "course_id": "TDP002",
+    "end_date": "2012-10-22",
+    "project_no": 1,
+    "big_image": "1big.jpg"
+  },
+  {
+    "start_date": "2012-09-03",
+    "short_description": "Portfolio-system i Python.",
+    "course_name": "Projekt: Egna Datormiljön",
+    "long_description": "Kursen inleder sviten av projektkurser för utbildningen Innovativ Programmering. I kursen jobbar studenterna i par med att bygga sin egen portfolio-programvara i Python. Portfolion är ett verktyg de själva sedan använder för att samla information om sina egna projekt under utbildingen. ",
+    "group_size": 2,
+    "academic_credits": "6",
+    "lulz_had": "",
+    "external_link": "/projects/1",
+    "small_image": "2small.jpg",
+    "techniques_used": [
+      "Flask",
+      "CSS3",
+      "Google App Engine",
+      "HTML5",
+      "Jinja2",
+      "JSON",
+      "Python 2.x",
+      "Subversion",
+      "XHTML"
+    ],
+    "project_name": "Portfolioprojekt",
+    "course_id": "TDP003",
+    "end_date": "2010-10-28",
+    "project_no": 2,
+    "big_image": "2big.jpg"
+  },
+  {
+    "start_date": "2012-08-20",
+    "short_description": "Objektorienterad programmering i C++11.",
+    "course_name": "Objektorienterad programmering",
+    "long_description": "Kursen är en fortsättningskurs i programmering / problemlösning och behandlar programspråket C++ och objektorientering som programmeringsmetod",
+    "group_size": 2,
+    "academic_credits": "8",
+    "lulz_had": "",
+    "external_link": "https://github.com/perjo927/Simulator",
+    "small_image": "3small.jpg",
+    "techniques_used": [
+      "C++11"
+    ],
+    "project_name": "C++",
+    "course_id": "TDP004",
+    "end_date": "2012-10-29",
+    "project_no": 3,
+    "big_image": "3big.jpg"
+  },
+  {
+    "start_date": "2012-11-06",
+    "short_description": "Objektorienterat 2D-spel i C++.",
+    "course_name": "Projekt: objektorienterade system",
+    "long_description": "Uppgift: Designa och implementera ett 2-dimensionellt dataspel (en typ av arkadspel) som är en simulering av en värld där figurerna i världen har ett beteende över tiden och där spelaren styr en av dessa figurer.",
+    "group_size": 3,
+    "academic_credits": "8",
+    "lulz_had": "http://youtu.be/MRvy0eWxCR0",
+    "external_link": "https://github.com/perjo927/AnimalFarm",
+    "small_image": "4small.jpg",
+    "techniques_used": [
+            "C++11", "Make", "SDL", "Subversion", "UML"
+    ],
+    "project_name": "Arkadspel: Animal Farm",
+    "course_id": "TDP005",
+    "end_date": "2012-12-21",
+    "project_no": 4,
+    "big_image": "4big.jpg"
+  }
+]

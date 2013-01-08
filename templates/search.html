@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+    {% block main %}
+
+
+        <article>
+            <header>
+                <hgroup>
+                    <!-- Sökformular med kryssrutor, menyer och radioknappar -->
+                    <h2>Sök</h2>
+                </hgroup>
+            </header>
+            <p>
+
+                <!-- Fritextsökruta (levererar vår söksträng) -->
+            <form action="/search/results" method="POST">
+                <b>Fritextsökning</b>
+                <br><br>
+                <input name="key"></input>
+                <input type="submit" value="Sök"></input>
+                <br><br><br>
+
+                <!-- Här kommer värdena till vår search_fields-lista -->
+                <b>Filtrera din fritextsökning efter kriterier</b>
+                <br><br>
+                <input type="checkbox" name="search_fields" value="course_id">
+                Kurskod
+                </input>
+                <input type="checkbox" name="search_fields" value="course_name">
+                Kursnamn
+                </input>
+                <input type="checkbox" name="search_fields" value="project_no">
+                Projekt-ID
+                </input>
+                <input type="checkbox" name="search_fields" value="project_name">
+                Projektnamn
+                </input>
+                <input type="checkbox" name="search_fields" value="short_description">
+                Beskrivning
+                </input>
+                <br><br>
+                <!-- Här kommer värden till listan techniques anges -->
+                <b>Filtrera din sökning efter utvalda tekniker</b>
+                <br><br>
+                <!-- Gör inget om värdet är 0 -->
+                {% for i in range(tlen) %}
+                    {% if i == 0 %}
+                    {% endif %}
+                    <!-- Annars: generera kryssrutor för att filtrera ut teknik/er -->
+                    <input type="checkbox" name="techniques" value="{{techniques[i]}}">
+                    {{techniques[i]}}
+                    </input>
+                {% endfor %}
+
+                <br><br><br>
+                <b>Välj unikt sorteringsfilter</b>
+                <br> (Fritext krävs ej)
+                <br><br>
+                <!-- I sort_by fångar vi det vi vill skicka till parametern sort_by i data.search() -->
+                <select name="sort_by">
+                    <option value="start_date">Startdatum</option>
+                    <option value="end_date">Slutdatum</option>
+                    <option value="techniques_used">Tekniknamn</option>
+                    <option value="project_no">Projektnummer</option>
+                    <option value="group_size">Gruppstorlek</option>
+                    <option value="academic_credits">Kurspoäng</option>
+                </select>&nbsp; &nbsp; &nbsp; &nbsp;
+                <br><br>
+                <!-- Fallande eller stigande sortering (sort_order) -->
+                <form>
+                    <b>Sortera din sökning</b><br><br>
+                    <input type="radio" name="sort_order" value="asc">Stigande sortering<br>
+                    <input type="radio" name="sort_order" value="desc" checked>Fallande sortering<br>
+                </form>
+            </form>
+            </p>
+        </article>
+
+
+
+    {% endblock %}
+
+    {% block side %}
+        <!-- Förklaring i textform till användaren -->
+        <h3>Så här söker du</h3>
+        <br>
+        <p2>
+            Sökrutan är till för fritextsökning i databasen.
+            <br><br>
+            Därefter kan du välja att filtrera din fritextsökning med hjälp av kryssrutorna.
+            <br><br>
+            Du kan sedan välja att sortera resultaten i den ordning du vill ha baserat
+            på något av valen i sorteringsmenyn.
+            <br><br>
+            Slutligen kan du sortera sökresultaten i fallande eller stigande ordning.
+            <br><br>
+            Sedan förs du vidare till sökresultatsidan.
+
+        </p2>
+    {% endblock %}
+
+
+

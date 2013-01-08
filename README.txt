@@ -1,0 +1,1 @@
+Web Portfolio architecture based on Python, Flask & Jinja.

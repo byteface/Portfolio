@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" href="/static/style/main.css" type="text/css">
+    <title>Per's Programming Portfolio</title>
+</head>
+
+<body>
+
+<div id="container">
+
+    <div id="top_left_section">
+        <a title="Pers programmeringsportfolio by PREYBIRD Productions" href="/">
+            <img src="../static/images/pp.png" alt="PREYBIRD Productions">
+        </a>
+        <p>
+            <a title="C-Sektionen vid Linköpings universitet">
+                <img src="../static/images/clogo_colour_bigger.png" alt="C-Sektionen" >
+            </a>
+        </p>
+    </div>
+
+    <header id="top_header">
+        <hgroup>
+            <h1>{PERs PROGRAMMERINGSPORTFOLIO};</h1>
+        </hgroup>
+    </header>
+
+    <nav id="top_menu">
+        <ul>
+            <li><a title="Startsida" href="/">start</a></li>
+            <li><a title="Projekt" href="/list">projekt</a></li>
+            <li><a title="Tekniker" href="/techniques">tekniker</a></li>
+            <li><a title="Sök på sajten" href="/search">sök</a></li>
+            <li><a title="Om Per" href="/per">per</a></li>
+            <li><a title="Pers CV" href="/cv">cv</a></li>
+            <li><a title="Kontakta Per" href="/kontakt">kontakt</a></li>
+
+        </ul>
+    </nav>
+
+    <section id="main_section">
+
+        {% block main %} {% endblock %}
+
+    </section>
+
+    <aside id="sidebar">
+
+        {% block side %} {% endblock %}
+
+    </aside>
+
+    <footer id="the_footer">
+        <p> © Per Jonsson @ PREYBIRD Productions 2013</p>
+    </footer>
+</div>
+
+</body>
+</html>
+
+
+
