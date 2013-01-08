@@ -1,29 +1,22 @@
 {% extends "layout.html" %}
-    {% block main %}
+{% block main %}
 
-        <article id="title">
-            <header>
-                <hgroup>
-                    <!--Fånga fel nr 404: fel URL -->
-                    <h2 align="center">Fel nr: {{e}}</h2>
-                </hgroup>
-            </header>
-            <p>Om</p>
-        </article>
+    <article id="title">
+        <header>
+            <hgroup>
+                <!--Fånga fel nr 404: fel URL -->
+                <h2>Fel nr: {{e}}</h2>
+            </hgroup>
+        </header>
+    </article>
 
-        <article>
-            <header>
-                <hgroup>
-                    <h2>Om</h2>
-                </hgroup>
-            </header>
-            <p align="center">
-                Kunde tyvärr inte hitta URL:en. Prova igen.
-            </p>
-        </article>
-
-
-
-    {% endblock %}
+    <article>
+        <header>
+            <hgroup>
+                <h2>Kunde tyvärr inte hitta URL:en. Prova igen.</h2>
+            </hgroup>
+        </header>
+    </article>
+{% endblock %}
 
 

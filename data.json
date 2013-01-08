@@ -26,7 +26,7 @@
     "group_size": 2,
     "academic_credits": "6",
     "lulz_had": "",
-    "external_link": "/projects/1",
+    "external_link": "https://github.com/perjo927/Portfolio",
     "small_image": "2small.jpg",
     "techniques_used": [
       "Flask",
